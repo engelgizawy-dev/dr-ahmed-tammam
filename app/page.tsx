@@ -10,8 +10,13 @@ export default function LandingPage() {
       className="min-h-screen bg-[#05050A] text-gray-100 font-sans relative overflow-x-hidden antialiased selection:bg-purple-500/30"
     >
       
-      {/* شبكة الخلفية التقنية (Grid Background) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0"></div>
+      {/* 🧬 خلفية بطابع الأحياء (خلايا سداسية - Cellular Pattern) 🧬 */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%22104%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20stroke%3D%22rgba(168,85,247,0.04)%22%20stroke-width%3D%221%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M30%200l26%2015v30L30%2060%204%2045V15z%22%2F%3E%3Cpath%20d%3D%22M30%20104l26-15V59L30%2044%204%2059v30z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E')] bg-[size:60px_104px] pointer-events-none z-0"></div>
+
+      {/* 🦠 عناصر أحياء طايرة في الخلفية (Watermark style) 🦠 */}
+      <div className="absolute top-[15%] right-[8%] text-8xl opacity-[0.03] pointer-events-none animate-[pulse_4s_ease-in-out_infinite] -z-10 grayscale blur-[2px]">🧬</div>
+      <div className="absolute bottom-[25%] left-[5%] text-9xl opacity-[0.02] pointer-events-none animate-[bounce_8s_infinite] -z-10 grayscale blur-[3px]">🦠</div>
+      <div className="absolute top-[55%] right-[35%] text-7xl opacity-[0.03] pointer-events-none animate-[pulse_6s_ease-in-out_infinite] -z-10 grayscale blur-[2px]">🔬</div>
 
       {/* تأثيرات إضاءة النيون الديناميكية */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse" />
@@ -63,7 +68,7 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* قسم من هو دكتور أحمد تمام؟ (About Instructor) - إبداع معماري */}
+      {/* قسم من هو دكتور أحمد تمام؟ (About Instructor) */}
       <section id="about" className="max-w-7xl mx-auto px-6 py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
@@ -117,19 +122,17 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/30 to-blue-600/30 rounded-full blur-[80px] -z-10"></div>
             
             <div className="relative rounded-[2.5rem] border border-white/10 p-2 bg-white/[0.02] backdrop-blur-xl shadow-2xl group overflow-hidden">
-              {/* الصورة */}
-              <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] bg-black">
-                {/* 
-                  ملاحظة هامة للمطور:
-                  تم تحويل رابط جوجل درايف ليكون مباشر باستخدام (uc?export=view&id=).
-                  الأفضل للـ Production إنك تحمل الصورة وتحطها في مجلد public 
-                  وتستخدمها كده: src="/dr-ahmed.jpg"
+              <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] bg-[#0A0A0F]">
+                
+                {/* ✅ تم حل مشكلة الـ TypeScript هنا بإضافة Type Assertion
                 */}
                 <img 
                   src="https://drive.google.com/uc?export=view&id=1iv-TSscvu2HfAyzHvmjJVch1WGMevwQd" 
                   alt="د. أحمد تمام" 
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => { e.target.src = 'https://via.placeholder.com/600x800/1a1a1a/a855f7?text=Doctor+Ahmed'; }}
+                  onError={(e) => { 
+                    (e.target as HTMLImageElement).src = 'https://via.placeholder.com/600x800/1a1a1a/a855f7?text=Doctor+Ahmed'; 
+                  }}
                 />
                 
                 {/* Overlay متدرج من تحت عشان يدمج الصورة مع الخلفية */}
@@ -150,9 +153,6 @@ export default function LandingPage() {
               </div>
             </div>
             
-            {/* عناصر زينة طايرة */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4yKSIvPjwvc3ZnPg==')] opacity-50 z-[-1]"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4yKSIvPjwvc3ZnPg==')] opacity-50 z-[-1]"></div>
           </div>
 
         </div>
