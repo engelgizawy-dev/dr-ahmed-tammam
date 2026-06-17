@@ -24,7 +24,7 @@ export default function LandingPage() {
             </div>
           </div>
           
-          {/* تم إزالة الأيقونات (البروفايل والإشعارات والوضع الليلي) بناءً على طلبك */}
+          {/* تم إزالة جميع الأيقونات بناءً على طلبك */}
           <div></div> 
         </div>
       </nav>
@@ -60,7 +60,6 @@ export default function LandingPage() {
             مع د/ أحمد تمام
           </p>
 
-          {/* تعديل أزرار الدخول والتسجيل */}
           <div className="flex flex-col sm:flex-row gap-6 mt-10">
             <Link 
               href="/auth/login" 
@@ -120,35 +119,20 @@ export default function LandingPage() {
             </Link>
           </div>
 
-          {/* الجانب الأيسر - بديل الصورة المضمون 100% */}
+          {/* الجانب الأيسر - صورة دكتور أحمد */}
           <div className="relative h-full min-h-[400px] flex items-end justify-center z-10 pb-10">
             
-            {/* Box زجاجي بديل للصورة عشان التصميم ميضربش */}
-            <div className="relative w-[300px] h-[400px] md:w-[380px] md:h-[480px] rounded-t-[3rem] rounded-b-xl border-2 border-[#C8D749]/30 bg-gradient-to-t from-[#C8D749]/10 to-transparent flex flex-col items-center justify-center overflow-hidden shadow-[0_0_40px_rgba(200,215,73,0.1)] group">
-              <div className="absolute inset-0 bg-[#0D3B3F]/50 backdrop-blur-sm z-0"></div>
-              
-              {/* أيقونة تعبيرية */}
-              <div className="relative z-10 w-24 h-24 rounded-full border-2 border-[#C8D749]/50 flex items-center justify-center bg-[#070B14]/50 mb-4 group-hover:scale-110 transition-transform duration-500">
-                <span className="text-4xl">👨‍⚕️</span>
-              </div>
-              
-              {/* نص توضيحي */}
-              <div className="relative z-10 text-center px-4">
-                <h3 className="text-[#C8D749] font-bold text-xl mb-2">صورة المستر</h3>
-                <p className="text-gray-300 text-sm opacity-70">
-                  سيتم إضافة الصورة هنا لاحقاً<br/>
-                  (لتعديلها ابحث عن تعليق "بديل الصورة" في الكود)
-                </p>
-              </div>
-
-              {/* تأثير إضاءة من تحت */}
-              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#C8D749]/20 to-transparent z-0"></div>
-            </div>
+            {/* الصورة من فولدر public مباشرة */}
+            <img 
+              src="/dr-ahmed.png" 
+              alt="د. أحمد تمام" 
+              className="w-[85%] max-w-[500px] object-contain drop-shadow-[0_20px_50px_rgba(200,215,73,0.3)] relative z-10 hover:scale-105 transition-transform duration-500"
+            />
             
-            {/* رسومات وأيقونات أحياء طايرة حوالين الـ Box */}
-            <div className="absolute top-[20%] right-[5%] text-white/30 text-4xl animate-pulse">🧬</div>
-            <div className="absolute top-[40%] left-[0%] text-white/30 text-5xl">🔬</div>
-            <div className="absolute bottom-[20%] right-[-5%] text-white/20 text-6xl">🦠</div>
+            {/* رسومات وأيقونات أحياء طايرة حوالين الصورة في الخلفية */}
+            <div className="absolute top-[20%] right-[5%] text-[#C8D749]/20 text-5xl animate-pulse z-0">🧬</div>
+            <div className="absolute top-[40%] left-[0%] text-white/10 text-6xl z-0 -rotate-12">🔬</div>
+            <div className="absolute bottom-[20%] right-[-5%] text-[#C8D749]/10 text-7xl z-0 animate-[bounce_5s_infinite]">🦠</div>
           </div>
 
         </div>
@@ -181,8 +165,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ================= FOOTER SECTION (Clean & Dark) ================= */}
-      {/* تم تغيير اللون لأسود عميق بناءً على طلبك وإزالة السوشيال والرسائل */}
+      {/* ================= FOOTER SECTION ================= */}
       <footer className="bg-[#030508] pt-16 pb-12 px-6 border-t border-white/5 text-center relative z-10">
         
         {/* Logo in Footer */}
