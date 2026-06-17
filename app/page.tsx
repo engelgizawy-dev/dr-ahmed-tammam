@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -80,15 +79,12 @@ export default function Home() {
           <div className="absolute w-72 h-72 md:w-[400px] md:h-[400px] bg-purple-600/20 rounded-full blur-[120px] -z-10 animate-pulse" />
           
           <div className="relative w-full max-w-sm aspect-[4/5] rounded-3xl p-4 border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-2xl overflow-hidden group hover:border-purple-500/30 transition-all duration-500">
-            {/* في حال عدم جاهزية السيرفر للتحميل الخارجي، نستخدم الروابط بأمان مع تفادي الـ Crash */}
+            {/* استخدام كود الصورة القياسي المباشر لتخطي قيود الـ Build والـ Optimization على فرسيل */}
             <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-b from-purple-900/20 to-black">
-              <Image 
-                src="https://drive.google.com/file/d/1iv-TSscvu2HfAyzHvmjJVch1WGMevwQd/view?usp=drivesdk"
+              <img 
+                src="https://drive.google.com/thumbnail?id=1iv-TSscvu2HfAyzHvmjJVch1WGMevwQd&sz=w1000"
                 alt="دكتور أحمد تمام"
-                fill
-                priority
-                unoptimized // لتفادي مشاكل الحظر المؤقت من جوجل درايف للـ Optmizer التلقائي
-                className="object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
               />
               {/* تدرج سفلي مظلم لدمج الصورة مع الكارت والـ Dark UI */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0F] via-transparent to-transparent opacity-80" />
