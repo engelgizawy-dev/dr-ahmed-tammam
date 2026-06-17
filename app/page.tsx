@@ -115,10 +115,8 @@ export default function LandingPage() {
           </div>
 
           <div className="relative h-full min-h-[400px] flex items-end justify-center z-10 pb-10">
-            
-            {/* اللينك المباشر الجديد للصورة من ImgBB */}
             <img 
-              src="https://i.ibb.co/cKyCDSS2/dr-ahmed.jpg" 
+              src="https://i.ibb.co/xKLSDxRV/686337622-1851256875552820-2562139221554127219-n.jpg" 
               alt="د. أحمد تمام" 
               className="w-[85%] max-w-[500px] object-contain drop-shadow-[0_20px_50px_rgba(200,215,73,0.3)] relative z-10 hover:scale-105 transition-transform duration-500"
               onError={(e) => { 
@@ -126,7 +124,6 @@ export default function LandingPage() {
               }}
               crossOrigin="anonymous"
             />
-            
             <div className="absolute top-[20%] right-[5%] text-[#C8D749]/20 text-5xl animate-pulse z-0">🧬</div>
             <div className="absolute top-[40%] left-[0%] text-white/10 text-6xl z-0 -rotate-12">🔬</div>
             <div className="absolute bottom-[20%] right-[-5%] text-[#C8D749]/10 text-7xl z-0 animate-[bounce_5s_infinite]">🦠</div>
@@ -162,11 +159,9 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ================= CLEAN MINIMAL FOOTER ================= */}
-      <footer className="bg-[#070B14] pt-16 pb-8 px-6 border-t border-[#0E5159]/40 relative z-10">
+      {/* ================= GLOBAL FOOTER ================= */}
+      <footer className="bg-[#02040A] pt-16 pb-8 px-6 border-t border-white/5 relative z-10">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-          
-          {/* منصة الدكتور */}
           <div className="mb-10 flex flex-col items-center">
              <div className="flex items-center gap-2 opacity-90">
                 <svg className="w-8 h-8 text-[#C8D749]" viewBox="0 0 24 24" fill="currentColor">
@@ -177,23 +172,16 @@ export default function LandingPage() {
                 </span>
              </div>
           </div>
-
-          {/* الخط الفاصل */}
           <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8"></div>
-
-          {/* سطر التطوير على نفس ستايل الصورة المرجعية */}
           <div className="flex flex-wrap justify-center items-center gap-2 text-sm md:text-base text-[#C8D749] font-mono tracking-wide mb-6" dir="ltr">
             <span className="opacity-80">&lt; Developed By &gt;</span>
             <span className="font-bold text-white bg-white/5 px-3 py-1 rounded-md border border-white/10">Elgizawy 👑</span>
             <span className="opacity-80">&lt; All Copy Rights Reserved @{new Date().getFullYear()} &gt;</span>
           </div>
-
-          {/* سطر الشركة */}
           <div className="flex flex-col items-center gap-1">
             <span className="text-gray-500 text-xs tracking-widest uppercase">Powered By</span>
             <span className="text-white font-black text-lg tracking-[0.2em]" dir="ltr">GIZA-TECH</span>
           </div>
-
         </div>
       </footer>
 
