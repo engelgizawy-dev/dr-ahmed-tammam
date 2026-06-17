@@ -1,14 +1,15 @@
-import './globals.css'
+// 1. استدعي الـ Provider اللي عملناه في أول الملف
+import { AuthProvider } from "@/context/AuthContext";
 
-export const metadata = {
-  title: 'منصة الدكتور أحمد تمام',
-  description: 'المنصة التعليمية الذكية لمادة الأحياء',
-}
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <body>{children}</body>
+      <body>
+        {/* 2. لف الـ {children} بالـ <AuthProvider> بالشكل ده */}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
-  )
+  );
 }
