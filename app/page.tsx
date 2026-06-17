@@ -101,8 +101,9 @@ export default function LandingPage() {
           </div>
 
           <div className="relative h-full min-h-[400px] flex items-end justify-center z-10 pb-10">
+            {/* اللينك الجديد اللي بعته */}
             <img 
-              src="https://i.ibb.co/rKQc4RR5/dr-ahmed.jpg" 
+              src="https://i.ibb.co/cKyCDSS2/dr-ahmed.jpg" 
               alt="د. أحمد تمام" 
               className="w-[85%] max-w-[500px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(200,215,73,0.3)] relative z-10 hover:scale-105 transition-transform duration-500"
               style={{ imageRendering: 'high-quality' }}
