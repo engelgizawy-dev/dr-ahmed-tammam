@@ -10,9 +10,10 @@ export default function LandingPage() {
       className="min-h-screen bg-[#070B14] text-gray-100 font-sans relative overflow-x-hidden antialiased selection:bg-[#C8D749]/30 selection:text-white"
     >
       
-      {/* 🧬 Navbar 🧬 */}
+      {/* 🧬 Navbar (Top Bar) 🧬 */}
       <nav className="w-full bg-[#070B14] border-b border-white/5 sticky top-0 z-50 px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center" dir="ltr">
+          {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer">
             <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
@@ -22,6 +23,8 @@ export default function LandingPage() {
               <span className="text-[10px] text-gray-400 font-bold tracking-widest uppercase">Biology Society</span>
             </div>
           </div>
+          
+          {/* تم إزالة الأيقونات (البروفايل والإشعارات والوضع الليلي) بناءً على طلبك */}
           <div></div> 
         </div>
       </nav>
@@ -29,6 +32,7 @@ export default function LandingPage() {
       {/* ================= HERO SECTION ================= */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-10 overflow-hidden">
         
+        {/* Floating Particles Background */}
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-[20%] left-[10%] w-2 h-2 rounded-full border border-[#C8D749]"></div>
           <div className="absolute top-[30%] right-[15%] w-1 h-1 rounded-full bg-[#C8D749]"></div>
@@ -56,6 +60,7 @@ export default function LandingPage() {
             مع د/ أحمد تمام
           </p>
 
+          {/* تعديل أزرار الدخول والتسجيل */}
           <div className="flex flex-col sm:flex-row gap-6 mt-10">
             <Link 
               href="/auth/login" 
@@ -88,6 +93,7 @@ export default function LandingPage() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
+          {/* الجانب الأيمن - النص */}
           <div className="space-y-8 z-10 pb-20">
             <div className="flex items-center gap-4">
               <h2 className="text-5xl md:text-7xl font-black text-[#C8D749]">
@@ -114,19 +120,35 @@ export default function LandingPage() {
             </Link>
           </div>
 
+          {/* الجانب الأيسر - بديل الصورة المضمون 100% */}
           <div className="relative h-full min-h-[400px] flex items-end justify-center z-10 pb-10">
-            <img 
-              src="https://i.ibb.co/xKLSDxRV/686337622-1851256875552820-2562139221554127219-n.jpg" 
-              alt="د. أحمد تمام" 
-              className="w-[85%] max-w-[500px] object-contain drop-shadow-[0_20px_50px_rgba(200,215,73,0.3)] relative z-10 hover:scale-105 transition-transform duration-500"
-              onError={(e) => { 
-                (e.currentTarget as HTMLImageElement).src = 'https://via.placeholder.com/400x500/0D3B3F/C8D749?text=Doctor+Ahmed'; 
-              }}
-              crossOrigin="anonymous"
-            />
-            <div className="absolute top-[20%] right-[5%] text-[#C8D749]/20 text-5xl animate-pulse z-0">🧬</div>
-            <div className="absolute top-[40%] left-[0%] text-white/10 text-6xl z-0 -rotate-12">🔬</div>
-            <div className="absolute bottom-[20%] right-[-5%] text-[#C8D749]/10 text-7xl z-0 animate-[bounce_5s_infinite]">🦠</div>
+            
+            {/* Box زجاجي بديل للصورة عشان التصميم ميضربش */}
+            <div className="relative w-[300px] h-[400px] md:w-[380px] md:h-[480px] rounded-t-[3rem] rounded-b-xl border-2 border-[#C8D749]/30 bg-gradient-to-t from-[#C8D749]/10 to-transparent flex flex-col items-center justify-center overflow-hidden shadow-[0_0_40px_rgba(200,215,73,0.1)] group">
+              <div className="absolute inset-0 bg-[#0D3B3F]/50 backdrop-blur-sm z-0"></div>
+              
+              {/* أيقونة تعبيرية */}
+              <div className="relative z-10 w-24 h-24 rounded-full border-2 border-[#C8D749]/50 flex items-center justify-center bg-[#070B14]/50 mb-4 group-hover:scale-110 transition-transform duration-500">
+                <span className="text-4xl">👨‍⚕️</span>
+              </div>
+              
+              {/* نص توضيحي */}
+              <div className="relative z-10 text-center px-4">
+                <h3 className="text-[#C8D749] font-bold text-xl mb-2">صورة المستر</h3>
+                <p className="text-gray-300 text-sm opacity-70">
+                  سيتم إضافة الصورة هنا لاحقاً<br/>
+                  (لتعديلها ابحث عن تعليق "بديل الصورة" في الكود)
+                </p>
+              </div>
+
+              {/* تأثير إضاءة من تحت */}
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#C8D749]/20 to-transparent z-0"></div>
+            </div>
+            
+            {/* رسومات وأيقونات أحياء طايرة حوالين الـ Box */}
+            <div className="absolute top-[20%] right-[5%] text-white/30 text-4xl animate-pulse">🧬</div>
+            <div className="absolute top-[40%] left-[0%] text-white/30 text-5xl">🔬</div>
+            <div className="absolute bottom-[20%] right-[-5%] text-white/20 text-6xl">🦠</div>
           </div>
 
         </div>
@@ -159,30 +181,36 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ================= GLOBAL FOOTER ================= */}
-      <footer className="bg-[#02040A] pt-16 pb-8 px-6 border-t border-white/5 relative z-10">
-        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-          <div className="mb-10 flex flex-col items-center">
-             <div className="flex items-center gap-2 opacity-90">
-                <svg className="w-8 h-8 text-[#C8D749]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                </svg>
-                <span className="text-3xl font-black text-white tracking-wider" dir="ltr">
-                  Tammam <span className="text-[#C8D749] text-lg font-bold">SOCIETY</span>
-                </span>
-             </div>
-          </div>
-          <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8"></div>
-          <div className="flex flex-wrap justify-center items-center gap-2 text-sm md:text-base text-[#C8D749] font-mono tracking-wide mb-6" dir="ltr">
-            <span className="opacity-80">&lt; Developed By &gt;</span>
-            <span className="font-bold text-white bg-white/5 px-3 py-1 rounded-md border border-white/10">Elgizawy 👑</span>
-            <span className="opacity-80">&lt; All Copy Rights Reserved @{new Date().getFullYear()} &gt;</span>
-          </div>
-          <div className="flex flex-col items-center gap-1">
-            <span className="text-gray-500 text-xs tracking-widest uppercase">Powered By</span>
-            <span className="text-white font-black text-lg tracking-[0.2em]" dir="ltr">GIZA-TECH</span>
+      {/* ================= FOOTER SECTION (Clean & Dark) ================= */}
+      {/* تم تغيير اللون لأسود عميق بناءً على طلبك وإزالة السوشيال والرسائل */}
+      <footer className="bg-[#030508] pt-16 pb-12 px-6 border-t border-white/5 text-center relative z-10">
+        
+        {/* Logo in Footer */}
+        <div className="flex flex-col items-center justify-center mb-12" dir="ltr">
+          <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+            <svg className="w-10 h-10 text-[#C8D749]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+            </svg>
+            <div className="flex flex-col text-left">
+              <span className="text-3xl font-black text-white leading-none tracking-wide">Tammam</span>
+              <span className="text-[12px] text-[#C8D749] font-bold tracking-widest uppercase">Biology Society</span>
+            </div>
           </div>
         </div>
+
+        {/* Developer Credits - Giza-Tech / Elgizawy */}
+        <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-500 font-mono mb-4" dir="ltr">
+          <span>&lt; Architected By &gt;</span>
+          <span className="bg-white/5 px-3 py-1 rounded-md text-[#C8D749] border border-[#C8D749]/20 font-bold">Elgizawy 👑</span>
+          <span>&lt; All Copy Rights Reserved @{new Date().getFullYear()} &gt;</span>
+        </div>
+
+        {/* Powered By Giza-Tech */}
+        <div className="text-gray-600 text-sm mt-6 flex flex-col items-center">
+          <p className="tracking-widest uppercase text-xs mb-1">Powered By</p>
+          <p className="font-black text-white tracking-widest text-lg">GIZA-TECH</p>
+        </div>
+
       </footer>
 
     </div>
